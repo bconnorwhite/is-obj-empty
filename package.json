@@ -1,0 +1,43 @@
+{
+  "name": "is-obj-empty",
+  "version": "1.0.0",
+  "description": "Check if an object is empty",
+  "license": "MIT",
+  "author": {
+    "name": "Connor White",
+    "email": "connor.bcw@gmail.com",
+    "url": "https://connorwhite.org"
+  },
+  "homepage": "https://connorwhite.org/github/is-obj-empty",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bconnorwhite/is-obj-empty.git"
+  },
+  "keywords": [
+    "is",
+    "object",
+    "obj",
+    "array",
+    "arr",
+    "empty",
+    "keys",
+    "has",
+    "no",
+    "check",
+    "if"
+  ],
+  "files": [
+    "build"
+  ],
+  "main": "./build/index.js",
+  "scripts": {
+    "build": "bob build",
+    "postversion": "git push",
+    "prepublishOnly": "yarn run build",
+    "test": "jest"
+  },
+  "devDependencies": {
+    "@bconnorwhite/bob": "^2.1.0",
+    "jest": "^26.4.2"
+  }
+}
