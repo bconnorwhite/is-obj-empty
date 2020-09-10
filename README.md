@@ -62,7 +62,6 @@ type AnyObject = {
 - [@bconnorwhite/bob](https://www.npmjs.com/package/@bconnorwhite/bob): Bob is a toolkit for TypeScript projects
 - [jest](https://www.npmjs.com/package/jest): Delightful JavaScript Testing.
 
-
 <h2>License <img align="right" alt="license" src="https://img.shields.io/npm/l/is-obj-empty.svg"></h2>
 
 [MIT](https://opensource.org/licenses/MIT)
