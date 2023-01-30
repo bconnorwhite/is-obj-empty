@@ -1,36 +1,50 @@
-<div align="center">
+<!--BEGIN HEADER-->
+<div id="top" align="center">
   <h1>is-obj-empty</h1>
   <a href="https://npmjs.com/package/is-obj-empty">
-    <img alt="npm" src="https://img.shields.io/npm/v/is-obj-empty.svg">
+    <img alt="NPM" src="https://img.shields.io/npm/v/is-obj-empty.svg">
   </a>
   <a href="https://github.com/bconnorwhite/is-obj-empty">
-    <img alt="typescript" src="https://img.shields.io/github/languages/top/bconnorwhite/is-obj-empty.svg">
-  </a>
-  <a href="https://github.com/bconnorwhite/is-obj-empty">
-    <img alt="GitHub stars" src="https://img.shields.io/github/stars/bconnorwhite/is-obj-empty?label=Stars%20Appreciated%21&style=social">
-  </a>
-  <a href="https://twitter.com/bconnorwhite">
-    <img alt="Twitter Follow" src="https://img.shields.io/twitter/follow/bconnorwhite.svg?label=%40bconnorwhite&style=social">
+    <img alt="TypeScript" src="https://img.shields.io/github/languages/top/bconnorwhite/is-obj-empty.svg">
   </a>
 </div>
 
 <br />
 
+<blockquote align="center">Check if an object is empty.</blockquote>
+
+<br />
+
+_If I should maintain this repo, please ⭐️_
+<a href="https://github.com/bconnorwhite/is-obj-empty">
+  <img align="right" alt="GitHub stars" src="https://img.shields.io/github/stars/bconnorwhite/is-obj-empty?label=%E2%AD%90%EF%B8%8F&style=social">
+</a>
+
+_DM me on [Twitter](https://twitter.com/bconnorwhite) if you have questions or suggestions._
+<a href="https://twitter.com/bconnorwhite">
+  <img align="right" alt="Twitter" src="https://img.shields.io/twitter/url?label=%40bconnorwhite&style=social&url=https%3A%2F%2Ftwitter.com%2Fbconnorwhite">
+</a>
+
+---
+<!--END HEADER-->
+
 > Check if an object is empty.
 
 ## Installation
 
-```bash
+```sh
 yarn add is-obj-empty
 ```
 
-```bash
+```sh
 npm install is-obj-empty
 ```
 
-## API
+```sh
+pnpm add is-obj-empty
+```
 
-### Usage
+## Usage
 
 ```ts
 import isEmpty from "is-obj-empty";
@@ -44,24 +58,24 @@ isEmpty([undefined]); // false
 isEmpty([true]); // false
 ```
 
-### Types
+Additionally, there an option is provided to ignore symbol keys:
+
 ```ts
-import isEmpty, { AnyObject } from "is-obj-empty";
-
-function isEmpty(object: AnyObject): boolean;
-
-type AnyObject = {
-  [index in string | number]: any;
-}
+isEmpty({ [Symbol()]: true }); // false
+isEmpty({ [Symbol()]: true }, { ignoreSymbolKeys: true }); // true
 ```
+
+<!--BEGIN FOOTER-->
 
 <br />
 
-<h2>Dev Dependencies<img align="right" alt="David" src="https://img.shields.io/david/dev/bconnorwhite/is-obj-empty.svg"></h2>
+<h2>Dev Dependencies</h2>
 
-- [@bconnorwhite/bob](https://www.npmjs.com/package/@bconnorwhite/bob): Bob is a toolkit for TypeScript projects
-- [jest](https://www.npmjs.com/package/jest): Delightful JavaScript Testing.
+- [autorepo](https://www.npmjs.com/package/autorepo): Autorepo abstracts away your dev dependencies, providing a single command to run all of your scripts.
 
-<h2>License <img align="right" alt="license" src="https://img.shields.io/npm/l/is-obj-empty.svg"></h2>
+<br />
+
+<h2 id="license">License <a href="https://opensource.org/licenses/MIT"><img align="right" alt="license" src="https://img.shields.io/npm/l/is-obj-empty.svg"></a></h2>
 
 [MIT](https://opensource.org/licenses/MIT)
+<!--END FOOTER-->
